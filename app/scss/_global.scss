@@ -1,0 +1,65 @@
+body {
+   @extend %rubik-400;
+   font-size: 20px;
+   line-height: 1.5;
+   color: $default;
+   background-color: #f9faff;
+}
+
+.container {
+   margin: 0 auto;
+   max-width: 1200px;
+   width: 100%;
+   padding: 0 15px;
+}
+
+.title {
+   @extend %rubik-500;
+   color: $title;
+   font-size: 36px;
+}
+
+.btn {
+   border-radius: 5px;
+   background-color: $accent;
+   color: #fff;
+}
+
+.animation-text {
+   border-radius: 5px;
+   transition: box-shadow .4s, color .4s;
+
+   &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, .7);
+   }
+
+   &:hover {
+      color: #FF6838;
+   }
+
+   &:active {
+      box-shadow: 2px 2px 5px 0 rgba(49, 53, 43, .5);
+   }
+}
+
+.animation-svg {
+   transition: box-shadow .4s, background-color .4s, color .4s;
+   border-radius: 5px;
+   &:focus {
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      background-color: rgba(#FF7A50, .1);
+      color: #FF7A50;
+   }
+
+   &:hover {
+      box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
+      background-color: #fff;
+      color: #FF6838;
+   }
+
+   &:active {
+      box-shadow: none;
+      background-color: rgba(#FF7A50, .1);
+      color: #FF7A50;
+   }
+}
