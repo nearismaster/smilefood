@@ -1,23 +1,28 @@
 $default: #31352B;
-$accent: #FF6838;
+$accent: #ff6838;
 $title: #363853;
+$accent-low: #FF7A50;
+$gray: #c2c2c2;
+$silver: #ececec;
+$white: #fff;
+$bg: #f9faff;
 
 %rubik-300 {
-   font-family: 'Rubik-Light', sans-serif;
+   font-family: 'Rubik', sans-serif;
    font-weight: 300;
 }
 
 %rubik-400 {
-   font-family: 'Rubik-Regular', sans-serif;
+   font-family: 'Rubik', sans-serif;
    font-weight: 400;
 }
 
 %rubik-500 {
-   font-family: 'Rubik-Medium', sans-serif;
+   font-family: 'Rubik', sans-serif;
    font-weight: 500;
 }
 
-%bgi{
+%bgi {
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
