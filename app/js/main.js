@@ -29,6 +29,10 @@ $(function () {
       }
    }
 
+   $('.reviews__items').slick({
+      dots: true
+   })
+
    // Обработчик события скролла для изменения цвета фона
    $(window).scroll(changeBackgroundColor);
 
