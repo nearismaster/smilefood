@@ -14,24 +14,25 @@
    <link rel="stylesheet" href="css/style.min.css">
 </head>
 
-<body>
+<body class="lock-parent">
    <header class="header">
       <div class="header__sticky">
          <div class="container">
             <nav class="menu d-flex">
                <a class="logo" href="#">
-                  <img class="logo__img" src="images/logo.png" alt="Логотип" width="200px" height="39px">
+                  <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" max-height="39">
                </a>
                <div class="menu__box d-flex">
                   <ul class="menu__list d-flex">
                      <li class="menu__item">
-                        <button class="menu__link animation-text menu__link--active" type="button">Главная</button>
+                        <a class="menu__link animation-text menu__link--active" href="#"
+                           rel="noopener noreferrer">Главная</a>
                      </li>
                      <li class="menu__item">
-                        <button class="menu__link animation-text" type="button">Блюда</button>
+                        <a class="menu__link animation-text" href="#" rel="noopener noreferrer">Блюда</a>
                      </li>
                      <li class=" menu__item">
-                        <button class="menu__link animation-text" type="button">Контакты</button>
+                        <a class="menu__link animation-text" href="#" rel="noopener noreferrer">Контакты</a>
                      </li>
                   </ul>
                   <ul class="menu__icons d-flex">
@@ -51,6 +52,10 @@
                         </button>
                      </li>
                   </ul>
+                  <button class="burger" type="button">
+                     <span class="burger__line"></span>
+                     <span class="sr-only">Открыть меню</span>
+                  </button>
                </div>
             </nav>
          </div>
@@ -64,6 +69,9 @@
             <div class="about__inner d-flex">
 
                <div class="about__info">
+                  <h1 class="sr-only">
+                     Самый лучший сайт, для доставки еды
+                  </h1>
                   <h2 class="title about__title">
                      Доставка
                      <span class="about__title-times">за 15 минут</span>
@@ -83,6 +91,7 @@
 
          </div>
       </section>
+        
       <section class="products section">
          <div class="container">
             <h2 class="title products__title">Популярные категории</h2>
@@ -133,461 +142,461 @@
 
                <ul class="products__holder mix category-burger">
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                </ul>
                <ul class="products__holder mix category-pizza">
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                </ul>
                <ul class="products__holder mix category-sendvich">
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                </ul>
                <ul class="products__holder mix category-asia">
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                </ul>
                <ul class="products__holder mix category-dish">
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Чизбургер с листьями салата</h3>
-                        <span class="product__cart-price">160 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item1.jpg" alt="красивый сочный чизбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Чизбургер с листьями салата</h3>
+                        <span class="product-cart__price">160 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
-                           width="140px" height="140px">
-                        <h3 class="product__cart-description">Бифбургер</h3>
-                        <span class="product__cart-price">190 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item2.jpg" alt="красивый сочный бифбургер"
+                           width="140" height="140">
+                        <h3 class="product-cart__description">Бифбургер</h3>
+                        <span class="product-cart__price">190 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item3.jpg"
-                           alt="красивый сочный королевский чизбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Королевский чизбургер</h3>
-                        <span class="product__cart-price">260 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item3.jpg"
+                           alt="красивый сочный королевский чизбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Королевский чизбургер</h3>
+                        <span class="product-cart__price">260 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item4.jpg"
-                           alt="красивый сочный черный гамбургер" width="140px" height="140px">
-                        <h3 class="product__cart-description">Черный гамбургер</h3>
-                        <span class="product__cart-price">199 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item4.jpg"
+                           alt="красивый сочный черный гамбургер" width="140" height="140">
+                        <h3 class="product-cart__description">Черный гамбургер</h3>
+                        <span class="product-cart__price">199 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                   <li class="products__holder-item">
-                     <article class="product__cart">
-                        <img class="product__cart-image" src="images/products/item5.jpg"
-                           alt="красивый сочный бургер с курицей" width="140px" height="140px">
-                        <h3 class="product__cart-description">Чикен бургер</h3>
-                        <span class="product__cart-price">180 <span class="currency">грн.</span></span>
-                        <button class="btn product__cart-btn  animation-svg" type="button">В корзину</button>
+                     <article class="product-cart">
+                        <img class="product-cart__image" src="images/products/item5.jpg"
+                           alt="красивый сочный бургер с курицей" width="140" height="140">
+                        <h3 class="product-cart__description">Чикен бургер</h3>
+                        <span class="product-cart__price">180 <span class="currency">грн.</span></span>
+                        <button class="btn product-cart__btn  animation-svg" type="button">В корзину</button>
                      </article>
                   </li>
                </ul>
@@ -598,7 +607,7 @@
 
          </div>
       </section>
-
+     
       <section class="delivery section">
          <div class="container delivery__container" style="background-image: url(images/delivery.png)">
             <div class="delivery__inner">
@@ -625,88 +634,92 @@
             <h2 class="title restaurant__title">Лучшие рестораны</h2>
             <ul class="restaurant__items">
                <li class="restaurant__item">
-                  <img class="restaurant__img" src="images/restaurant/blaze.jpg" alt="отрезанная пицца на лопатке">
+                  <img class="restaurant__img" src="images/restaurant/blaze.jpg" alt="отрезанная пицца на лопатке"
+                     width="370" height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">Blaze Pizza</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">11:00 - 22:00</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">11:00 - 22:00</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
                <li class="restaurant__item">
                   <img class="restaurant__img" src="images/restaurant/runcho.jpg"
-                     alt="отрезанный треугольник пиццы перед самой пиццой">
+                     alt="отрезанный треугольник пиццы перед самой пиццой" width="370" height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">Pizza Runcho</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">12:00 - 21:00</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">12:00 - 21:00</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
                <li class="restaurant__item">
-                  <img class="restaurant__img" src="images/restaurant/hut.jpg" alt="овощи на фоне пиццы">
+                  <img class="restaurant__img" src="images/restaurant/hut.jpg" alt="овощи на фоне пиццы" width="370"
+                     height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">Pizza Hut</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">11:00 - 22:00</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">11:00 - 22:00</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
                <li class="restaurant__item">
-                  <img class="restaurant__img" src="images/restaurant/mc-donalds.jpg" alt="красивый бургер">
+                  <img class="restaurant__img" src="images/restaurant/mc-donalds.jpg" alt="красивый бургер" width="370"
+                     height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">McDonald`s</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">06:00 - 23:00</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">06:00 - 23:00</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
                <li class="restaurant__item">
-                  <img class="restaurant__img" src="images/restaurant/kfc.jpg" alt="картошка фри и бургер">
+                  <img class="restaurant__img" src="images/restaurant/kfc.jpg" alt="картошка фри и бургер" width="370"
+                     height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">KFC</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">06:00 - 23:30</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">06:00 - 23:30</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
                <li class="restaurant__item">
                   <img class="restaurant__img" src="images/restaurant/star.jpg"
-                     alt="черный бургер и картошка фри на тарелке">
+                     alt="черный бургер и картошка фри на тарелке" width="370" height="300">
                   <div class="restaurant__holder">
                      <h3 class="restaurant__name">Star Burgers</h3>
                      <div class="restaurant__info">
-                        <span class="restaurant__time">09:00 - 21:00</span>
-                        <button class="restaurant__btn animation-svg">
+                        <time class="restaurant__time">09:00 - 21:00</time>
+                        <a class="restaurant__btn animation-svg" href="#" target="_blank" rel="noopener noreferrer">
                            <svg class="restaurant__btn-image">
                               <use xlink:href="images/sprite.svg#icon-arrow"></use>
                            </svg>
-                        </button>
+                        </a>
                      </div>
                   </div>
                </li>
@@ -722,7 +735,8 @@
 
                <li class="reviews__item">
                   <div class="reviews__holder">
-                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img">
+                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img" width="300"
+                        height="300">
                      <div class="reviews__box">
                         <blockquote class="reviews__blockquote">
                            SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный
@@ -746,7 +760,8 @@
                </li>
                <li class="reviews__item">
                   <div class="reviews__holder">
-                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img">
+                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img" width="300"
+                        height="300">
                      <div class="reviews__box">
                         <blockquote class="reviews__blockquote">
                            SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный
@@ -770,7 +785,8 @@
                </li>
                <li class="reviews__item">
                   <div class="reviews__holder">
-                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img">
+                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img" width="300"
+                        height="300">
                      <div class="reviews__box">
                         <blockquote class="reviews__blockquote">
                            SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный
@@ -794,7 +810,8 @@
                </li>
                <li class="reviews__item">
                   <div class="reviews__holder">
-                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img">
+                     <img src="images/user.jpg" alt="фотография пользователя" class="reviews__img" width="300"
+                        height="300">
                      <div class="reviews__box">
                         <blockquote class="reviews__blockquote">
                            SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный
@@ -824,37 +841,45 @@
 
       <section class="application section">
          <div class="container">
-            <div class="application__inner d-flex">
+            <div class="application__inner">
                <div class="application__holder">
                   <h2 class="title application__title">Скачайте мобильное приложение</h2>
                   <p class="application__text">
-                     Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом удобном месте.
+                     Рестораны, которые вы любите - в ваших руках. Устанавливайте приложение и заказывайте еду в любом
+                     удобном месте.
                   </p>
                   <ul class="application__items d-flex">
                      <li class="application__item">
-                        <a class="application__link application__link--app-store" href="#"></a>
+                        <a class="application__link" href="#">
+                           <img class="application__icon" src="images/app-store.png" alt="магазин app store" width="120"
+                              height="40">
+                        </a>
                      </li>
                      <li class="application__item">
-                        <a class="application__link application__link--google-play" href="#"></a>
+                        <a class="application__link application__link--google-play" href="#">
+                           <img class="application__icon" src="images/google-play.png" alt="магазин google play"
+                              width="135" height="40">
+                        </a>
                      </li>
                   </ul>
                </div>
-               <img class="application__img" src="images/application-bg.jpg" alt="тарелка с овощами по центру, в левой руке телефон на экране которого SimpleFood">
             </div>
          </div>
       </section>
 
    </main>
 
+   
    <footer class="footer">
       <div class="container">
-         <div class="footer__inner d-flex">
+         <div class="footer__inner">
 
             <div class="logo-and-form">
-               <a class="logo" href="#">
-                  <img class="logo__img" src="images/logo.png" alt="Логотип">
+               <a class="logo logo-and-form__mb" href="#">
+                  <img class="logo__img" src="images/logo.svg" alt="Логотип" width="200" height="39">
                </a>
                <form class="logo-and-form__form">
+                  <label class="sr-only">сюда нужно ввести email</label>
                   <input class="logo-and-form__form-email" type="email" name="email" placeholder="Ваш email" required>
                   <button class="btn logo-and-form__form-btn animation-svg" type="submit">
                      <svg class="logo-and-form__form-svg">
@@ -864,50 +889,69 @@
                   </button>
                </form>
             </div>
+            
             <ul class="footer__items d-flex">
-               <li class="footer__item d-flex">
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Как это работает
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Продукты
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Блюда
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Меню
                   </a>
                </li>
-               <li class="footer__item d-flex">
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      О нас
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Новости
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Партнеры
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      ЧаВо
                   </a>
                </li>
-               <li class="footer__item d-flex">
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Скачать приложение
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Блог
                   </a>
+               </li>
+               <li class="footer__item">
                   <a class="footer__item-link animation-text" href="#">
                      Что нового?
                   </a>
-                  <a class="footer__item-link animation-text" href="#">
+               </li>
+               <li class="footer__item"><a class="footer__item-link animation-text" href="#">
                      Карта сайта
                   </a>
                </li>
             </ul>
+
             <div class="contacts">
                <a class="contacts__info contacts__info--adress animation-text" href="#">
                   ул. Т.Г.Шевченко, 1
@@ -945,7 +989,9 @@
          </div>
       </div>
       <div class="footer__bottom">© 2022 Simple Food</div>
-   </footer>
+   </footer> 
+
+
 
    <script src="js/main.min.js"></script>
 </body>

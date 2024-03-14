@@ -6,6 +6,13 @@ $gray: #c2c2c2;
 $silver: #ececec;
 $white: #fff;
 $bg: #f9faff;
+$breakpoints: (
+   "phone-mini": 375px,
+   "phone": 560px,
+   "tablet": 768px,
+   "tablet-2": 992px,
+   "desktop": 1230px
+);
 
 %rubik-300 {
    font-family: 'Rubik', sans-serif;
@@ -26,4 +33,117 @@ $bg: #f9faff;
    background-repeat: no-repeat;
    background-size: cover;
    background-position: center;
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+   content: $content;
+   display: $display;
+   position: $pos;
+}
+
+@mixin responsive-ratio($x, $y, $pseudo: false) {
+   $padding: unquote(($y / $x ) * 100 + '%');
+
+   @if $pseudo {
+      &::before {
+         @include pseudo($pos: relative);
+         width: 100%;
+         padding-top: $padding;
+      }
+   }
+
+   @else {
+      padding-top: $padding;
+   }
+}
+
+@mixin mq($width, $type: min) {
+   @if map_has_key($breakpoints, $width) {
+      $width: map_get($breakpoints, $width);
+
+      @if $type ==max {
+         $width: $width - 1px;
+      }
+
+      @media only screen and (#{$type}-width: $width) {
+         @content;
+      }
+   }
+}
+
+@mixin line-clamp($lines: 1) {
+   @if $lines <=1 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+   }
+
+   @else {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: $lines;
+      -webkit-box-orient: vertical;
+   }
+}
+
+$burgerWidth: 30px;
+$burgerHeight: 22px;
+$burgerLineHeight: 2px;
+$burgerColor: $title;
+
+@mixin burger {
+   width: $burgerWidth;
+   height: $burgerHeight;
+   position: relative;
+   color: $burgerColor;
+
+   &__line {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      height: $burgerLineHeight;
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out;
+   }
+
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: $burgerLineHeight;
+      background-color: currentColor;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+   }
+
+   &::before {
+      top: 0;
+   }
+
+   &::after {
+      top: calc(100% - #{$burgerLineHeight});
+   }
+
+   &--active {
+      .burger__line {
+         transform: scale(0);
+         transition: transform 0.3s ease-in-out;
+      }
+
+      &::before {
+         transform: rotate(45deg);
+         top: 50%;
+         transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+
+      &::after {
+         transform: rotate(-45deg);
+         top: 50%;
+         transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+      }
+   }
 }
