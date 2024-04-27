@@ -1,0 +1,29 @@
+.breadcrumbs {
+   padding: 17px 0;
+   background-color: rgba($accent-low, 0.1);
+   margin-top: 160px;
+   @include mq('desktop') {
+      margin-top: 72px;
+   }
+   @include mq('tablet-2') {}
+   &__item:not(:first-child) {
+      padding-left: 17px;
+      position: relative;
+      &::before {
+         @include pseudo;
+         top: 50%;
+         left: 6px;
+         width: 6px;
+         height: 10px;
+         background-image: url('../images/icons/slider-arrow.svg');
+         background-size: cover;
+         transform: translateY(-30%) rotate(180deg);
+      }
+   }
+   &__link {
+      font-size: 14px;
+      line-height: 1.2;
+      letter-spacing: 1.3px;
+      color: $gray-large;
+   }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+   
+   {% include 'app/module/_meta/_meta.html' %}
+   <link rel="stylesheet" href="css/index.min.css">
+
+</head>
+
+<body>
+   
+   {% include 'app/module/_header/_header.html' %}
+
+   <main class="main">
+
+   {% include 'app/module/_about/_about.html' %}
+      
+   {% include 'app/module/_products/_products.html' %}
+
+   {% include 'app/module/_delivery/_delivery.html' %}
+      
+   {% include 'app/module/_restaurant/_restaurant.html' %}
+
+   {% include 'app/module/_reviews/_reviews.html' %}
+      
+   {% include 'app/module/_application/_application.html' %}
+
+   </main>
+
+   {% include 'app/module/_footer/_footer.html' %}
+
+   <script src="js/main.min.js"></script>
+</body>
+
+</html>
