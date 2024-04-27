@@ -1,0 +1,94 @@
+.delivery {
+   &__inner {
+      position: relative;
+      padding: 0 85px;
+      background-repeat: no-repeat;
+      background-position: 85px center;
+      background-size: 440px 585px;
+      &::before {
+         content: '';
+         position: absolute;
+         inset: 0;
+         background-color: transparent;
+         @include mq('desktop') {
+            background-color: rgba($bg, 0.85);
+         }
+      }
+      @include mq('tablet') {
+         padding: 0 15px;
+         background-position: center;
+         background-size: 345px 440px;
+      }
+      @include mq('phone') {
+         padding: 0;
+      }
+   }
+   &__content {
+      position: relative;
+      z-index: 1;
+      margin-left: auto;
+      padding-top: 58px;
+      max-width: 470px;
+      width: 100%;
+      border-radius: 7px;
+      @include mq('tablet') {
+         padding-top: 25px;
+         margin: 0 auto;
+      }
+   }
+   &__title {
+      margin-bottom: 30px;
+      @include mq('tablet') {
+         font-size: 24px;
+      }
+   }
+   &__text {
+      margin-bottom: 30px;
+      @include mq('tablet') {
+         font-size: 16px;
+      }
+   }
+   &__items {
+      font-size: 24px;
+      color: $title;
+      margin-bottom: 30px;
+      @include mq('tablet') {
+         font-size: 18px;
+      }
+   }
+   &__item {
+      padding-left: 64px;
+      position: relative;
+      white-space: nowrap;
+      @include mq('phone-mini') {
+         font-size: 14px;
+      }
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+      &::before {
+         content: '';
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 34px;
+         height: 34px;
+      }
+      &--timer::before {
+         background-image: url('../images/icons/icon-timer.svg');
+      }
+      &--car::before {
+         background-image: url('../images/icons/icon-car.svg');
+      }
+      &--resturent::before {
+         background-image: url('../images/icons/icon-resturent.svg');
+      }
+   }
+   &__btn {
+      margin-bottom: 57px;
+      padding: 8px 29px;
+      @include mq('tablet') {
+         margin-bottom: 25px;
+      }
+   }
+}

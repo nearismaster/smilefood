@@ -1,0 +1,64 @@
+.application {
+   padding-bottom: 120px;
+   @include mq('tablet-2') {
+      margin-bottom: 40px;
+      padding-bottom: 0;
+   }
+   &__inner {
+      background-image: url('../images/application-bg.jpg');
+      background-repeat: no-repeat;
+      background-size: 570px 380px;
+      background-position: right center;
+      @include mq('desktop') {
+         background-size: 450px 300px;
+      }
+      @include mq('tablet-2') {
+         background-image: none;
+         display: flex;
+         justify-content: center;
+      }
+   }
+   &__holder {
+      padding: 46px 0 36px 0;
+      max-width: 540px;
+      width: 100%;
+      @include mq('tablet-2') {
+         padding: 0;
+      }
+   }
+   &__title {
+      margin-bottom: 45px;
+      @include mq('tablet') {
+         margin-bottom: 15px;
+      }
+   }
+   &__text {
+      margin-bottom: 30px;
+      @include mq('tablet') {
+         margin-bottom: 15px;
+      }
+      @include mq('phone') {
+         font-size: 14px;
+      }
+   }
+   &__item:not(:last-child) {
+      margin-right: 30px;
+   }
+   &__link {
+      display: block;
+      width: 120px;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+      &--google-play {
+         width: 135px;
+      }
+   }
+   &__icon {
+      @extend %bgi;
+   }
+   &__img {
+      width: 570px;
+      height: 380px;
+   }
+}
